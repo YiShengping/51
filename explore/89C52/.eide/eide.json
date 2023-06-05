@@ -1,48 +1,39 @@
 {
-  "name": "template",
+  "name": "89C52",
   "type": "C51",
   "dependenceList": [],
-  "srcDirs": [],
+  "srcDirs": [
+    "src",
+    "inc"
+  ],
   "virtualFolder": {
     "name": "<virtual_root>",
     "files": [],
-    "folders": [
-      {
-        "name": "Source Group 1",
-        "files": [
-          {
-            "path": "main.c"
-          }
-        ],
-        "folders": []
-      }
-    ]
+    "folders": []
   },
   "outDir": "build",
   "deviceName": null,
   "packDir": null,
   "miscInfo": {
-    "uid": "8776ecd294605d1357fd129cfbf99b76"
+    "uid": "2a0357ca0c673bdbd4590783ba804eb7"
   },
   "targets": {
-    "Target 1": {
+    "Debug": {
       "excludeList": [],
-      "toolchain": "Keil_C51",
+      "toolchain": "SDCC",
       "compileConfig": {
         "options": "null"
       },
       "uploader": "Custom",
       "uploadConfig": {
         "bin": "",
-        "commandLine": "",
+        "commandLine": "python ./tools/stcflash.py -p ${port} \"${hexFile}\"",
         "eraseChipCommand": ""
       },
       "uploadConfigMap": {},
       "custom_dep": {
         "name": "default",
-        "incList": [
-          "../../../../../../Program Files (x86)/Keil_V4/C51/INC/Atmel"
-        ],
+        "incList": [],
         "libList": [],
         "sourceDirList": [],
         "defineList": []
